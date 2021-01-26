@@ -1,0 +1,279 @@
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/dc/elements/1.1/created> "2021-01-26" .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria" .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/dc/elements/1.1/title> "Renovation Process Ontology"@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://purl.org/vocab/vann/preferredNamespacePrefix> "renp" .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology to model building renovation processes."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the specific end time for a task."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "has end time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a task with the key performance indicators needed to measure the advances over it."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI> <http://www.w3.org/2000/01/rdf-schema#label> "has KPI"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasNextTask
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasNextTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasNextTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasNextTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasNextTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the current task with the next task within a process."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasNextTask> <http://www.w3.org/2000/01/rdf-schema#label> "has next task"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasPerformanceParameter
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a task with the parameters used to track its performance."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has performance parameter"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasPreviousTask
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPreviousTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPreviousTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPreviousTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPreviousTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the current task with the previous one within a process."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasPreviousTask> <http://www.w3.org/2000/01/rdf-schema#label> "has previous task"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Process> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Decomposes a project into processes."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess> <http://www.w3.org/2000/01/rdf-schema#label> "has process"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasRisk
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Risk> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a task with the risks that surround it."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has risk"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the specific start time for a task."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#label> "has start time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask
+<http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Process> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the tasks needed to perform a specific process."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask> <http://www.w3.org/2000/01/rdf-schema#label> "involves task"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Stakeholder> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the responsible for executing a specific task."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy> <http://www.w3.org/2000/01/rdf-schema#label> "is done by"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#isPartOf
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Individual> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Organization> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an individual (person, worker, etc) to an organization."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#isPerformedOver
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPerformedOver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPerformedOver> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPerformedOver> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPerformedOver> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates what is the object or building element affected by the task at hand."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#isPerformedOver> <http://www.w3.org/2000/01/rdf-schema#label> "is performed over"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtApartment
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtApartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtApartment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtApartment> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtApartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the apartment where the task needs to be performed."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtApartment> <http://www.w3.org/2000/01/rdf-schema#label> "performed at apartment"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the space where the task needs to be performed."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace> <http://www.w3.org/2000/01/rdf-schema#label> "performed at space"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtStorey
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtStorey> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Storey> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the storey where the task needs to be performed."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtStorey> <http://www.w3.org/2000/01/rdf-schema#label> "performed at storey"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource
+<http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/renovation-process#Task> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a task with the resources needed to perform it."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource> <http://www.w3.org/2000/01/rdf-schema#label> "requires resource"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Apartment
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/building#Apartment"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#label> "Apartment"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Element
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/building#Element"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Space
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/building#Space"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Storey
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/building#Storey"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Kpi"@en .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI> <http://www.w3.org/2000/01/rdf-schema#label> "KPI"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter"@en .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Parameter"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess> .
+_:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"@en .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#EquipmentResource
+<http://bimerr.iot.linkeddata.es/def/renovation-process#EquipmentResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment Resource"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#HumanResource
+<http://bimerr.iot.linkeddata.es/def/renovation-process#HumanResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#HumanResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#HumanResource> <http://www.w3.org/2000/01/rdf-schema#label> "Human Resource"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Individual
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-process#Stakeholder> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#MaterialResource
+<http://bimerr.iot.linkeddata.es/def/renovation-process#MaterialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#label> "Material Resource"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Organization
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-process#Stakeholder> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Process
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-process#involvesTask> .
+_:genid2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy> .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction process involved in a building renovation project."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Resource
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource needed to perform the task"@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Risk
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Stakeholder
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "Stakeholder"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-process#Task
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-process#isDoneBy> .
+_:genid4 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-process#hasEndTime> .
+_:genid5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-process#hasStartTime> .
+_:genid6 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific activity within a process."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-process#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task"@en .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "See https://www.w3.org/TR/owl-time/#time:Instant"@en .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
