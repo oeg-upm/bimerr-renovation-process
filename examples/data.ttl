@@ -1,0 +1,356 @@
+@prefix renp: <https://bimerr.iot.linkeddata.es/def/renovation-process#> .
+@prefix building: <https://bimerr.iot.linkeddata.es/def/building#> .
+@prefix kpi: <https://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix s4city: <https://w3id.org/def/saref4city#> .
+@prefix ex: <https://bimerr.iot.linkeddata.es/def/renovation-process/data/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+
+ex:Project01 rdf:type kpi:Project ;
+                renp:hasProcess ex:Pr001_P01 .
+
+ex:Pr001_P01 rdf:type renp:Process ;
+                rdfs:label "Facade Improvement Process"^^xsd:string ;
+                renp:hasTask ex:Task001_Pr001_P01 ;
+                renp:hasTask ex:Task002_Pr001_P01 ;
+                renp:hasTask ex:Task003_Pr001_P01 ;
+                renp:hasTask ex:Task004_Pr001_P01 ;
+                renp:hasTask ex:Task005_Pr001_P01 ;
+                renp:hasTask ex:Task006_Pr001_P01 ;
+                renp:hasTask ex:Task007_Pr001_P01 ;
+                renp:hasTask ex:Task008_Pr001_P01 ;
+                renp:hasTask ex:Task009_Pr001_P01 ;
+                renp:hasTask ex:Task010_Pr001_P01 ;
+                renp:hasTask ex:Task011_Pr001_P01 ;
+                renp:hasTask ex:Task012_Pr001_P01 ;
+                renp:hasTask ex:Task013_Pr001_P01 ;
+                renp:hasTask ex:Task014_Pr001_P01 .
+
+ex:Task001_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Install Material Lift or Crane"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T01 ;
+                renp:hasEndTime ex:Instant02_T01 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk002 ;
+                renp:hasRisk ex:Risk007 ;
+                renp:hasNextTask ex:Task002_Pr001_P01 ;
+                renp:hasPerformanceParameter ex:DurationTime_T01_Pr001 ;
+                renp:hasPerformanceParameter ex:CostOnEquipment_T01_Pr001 ;
+                renp:hasPerformanceParameter ex:CostOnPersonal_T01_Pr001 .
+
+ex:Instant01_T01 rdf:type time:Instant ;
+                time:inXSDDate "2021-01-01"^^xsd:date .
+
+ex:Instant02_T01 rdf:type time:Instant ;
+                time:inXSDDate "2021-01-30"^^xsd:date .
+
+
+
+ex:Risk001 rdf:type renp:Risk ;
+                rdfs:label "Delay based on weather"^^xsd:string .
+
+ex:Risk002 rdf:type renp:Risk ;
+                rdfs:label "Delay based on supplier"^^xsd:string .
+
+ex:Risk003 rdf:type renp:Risk ;
+                rdfs:label "Delay based on subcontractor"^^xsd:string .
+
+ex:Risk004 rdf:type renp:Risk ;
+                rdfs:label "Delay based on customer"^^xsd:string .
+
+ex:Risk005 rdf:type renp:Risk ;
+                rdfs:label "Non-compliant safety measures"^^xsd:string .
+
+ex:Risk006 rdf:type renp:Risk ;
+                rdfs:label "More material needed than expected"^^xsd:string .
+
+ex:Risk007 rdf:type renp:Risk ;
+                rdfs:label "Real material is different than expected"^^xsd:string .
+
+ex:Risk007 rdf:type renp:Risk ;
+                rdfs:label "Wrong machine"^^xsd:string .
+
+
+
+
+ex:Task002_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Install Safety Measure"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T02 ;
+                renp:hasEndTime ex:Instant02_T02 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task003_Pr001_P01 ;
+                renp:hasPerformanceParameter ex:DurationTime_T02_Pr001 ;
+                renp:hasPerformanceParameter ex:ExecutionTime_T02_Pr001 ;
+                renp:hasPerformanceParameter ex:PersonalCost_T02_Pr001 .
+
+ex:Instant01_T02 rdf:type time:Instant ;
+                time:inXSDDate "2021-02-01"^^xsd:date .
+
+ex:Instant02_T02 rdf:type time:Instant ;
+                time:inXSDDate "2021-02-28"^^xsd:date .
+
+ex:DurationTime_T02_Pr001 rdf:type kpi:PerformanceParameter .
+
+ex:ExecutionTime_T02_Pr001 rdf:type kpi:PerformanceParameter .
+
+ex:PersonalCost_T02_Pr001 rdf:type kpi:PerformanceParameter ;
+                saref:hasValue "100.00"^^xsd:float ;
+                saref:isMeasuredIn ex:EUR_per_HOUR ;
+                renp:relatedToResource ex:SecurityAgent .
+
+ex:Task003_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Building scaffold"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T03 ;
+                renp:hasEndTime ex:Instant02_T03 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task004_Pr001_P01 ;
+                renp:hasPerformanceParameter ex:DurationTime_T03_Pr001 ;
+                renp:hasPerformanceParameter ex:CostOfScaffold_T03_Pr001 ;
+                renp:hasPerformanceParameter ex:ScaffoldQuantity_T03_Pr001 ;
+                renp:requiresResource ex:Scaffold .
+
+ex:Instant01_T03 rdf:type time:Instant ;
+                time:inXSDDate "2021-03-01"^^xsd:date .
+
+ex:Instant02_T03 rdf:type time:Instant ;
+                time:inXSDDate "2021-03-30"^^xsd:date .
+
+
+ex:Scaffold rdf:type renp:EquipmentResource ;
+                rdfs:label "Scaffold"^^xsd:string .
+
+ex:SecurityAgent rdf:type renp:HumanResource ;
+                rdfs:label "Security agent"^^xsd:string .
+
+ex:SpecialAgent rdf:type renp:HumanResource ;
+                rdfs:label "Special agent"^^xsd:string .
+
+ex:SubContractor rdf:type renp:HumanResource ;
+                rdfs:label "Subcontractor"^^xsd:string .
+
+ex:DurationTime_T03_Pr001 rdf:type kpi:PerformanceParameter ;
+                saref:hasValue "30"^^xsd:integer ;
+                saref:isMeasuredIn ex:days .
+
+ex:CostOfScaffold_T03_Pr001 rdf:type kpi:PerformanceParameter ;
+                saref:hasValue "15"^^xsd:integer ;
+                saref:isMeasuredIn ex:EUR_per_M2 ;
+                renp:relatedToResource ex:Scaffold .
+
+ex:ScaffoldQuantity_T03_Pr001 rdf:type kpi:PerformanceParameter ;
+                saref:hasValue "1000"^^xsd:integer ;
+                saref:isMeasuredIn ex:M2 ;
+                renp:relatedToResource ex:Scaffold .
+
+ex:days rdf:type saref:UnitOfMeasure .
+
+ex:M2 rdf:type saref:UnitOfMeasure .
+
+ex:EUR_per_M2 rdf:type saref:UnitOfMeasure .
+
+ex:EUR_per_HOUR rdf:type saref:UnitOfMeasure .
+
+
+ex:Task004_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Provisionally reorganization of Gas, Electricity, Telecommunication"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T04 ;
+                renp:hasEndTime ex:Instant02_T04 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task005_Pr001_P01 .
+
+ex:Instant01_T04 rdf:type time:Instant ;
+                time:inXSDDate "2021-04-01"^^xsd:date .
+
+ex:Instant02_T04 rdf:type time:Instant ;
+                time:inXSDDate "2021-04-30"^^xsd:date .
+
+ex:Task005_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "De-installation and covering of equipment on facade"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T05 ;
+                renp:hasEndTime ex:Instant02_T05 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task006_Pr001_P01 .
+
+ex:Instant01_T05 rdf:type time:Instant ;
+                time:inXSDDate "2021-05-01"^^xsd:date .
+
+ex:Instant02_T05 rdf:type time:Instant ;
+                time:inXSDDate "2021-05-30"^^xsd:date .
+
+ex:Task006_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Cleaning of the surface of facade"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T06 ;
+                renp:hasEndTime ex:Instant02_T06 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasRisk ex:Risk006 ;
+                renp:hasRisk ex:Risk007 ;
+                renp:isPerformedOver ex:Wall01_Storey03 ;
+                renp:isPerformedOver ex:Wall02_Storey03 ;
+                renp:performedAtStorey ex:Storey03 ;
+                renp:hasNextTask ex:Task007_Pr001_P01 .
+
+ex:Instant01_T06 rdf:type time:Instant ;
+                time:inXSDDate "2021-06-01"^^xsd:date .
+
+ex:Instant02_T06 rdf:type time:Instant ;
+                time:inXSDDate "2021-06-30"^^xsd:date .
+
+ex:Risk01_T06 rdf:type renp:Risk ;
+                rdfs:label "More material needed."^^xsd:string .
+
+ex:Storey03 rdf:type building:Storey .
+
+ex:Wall01_Storey03 rdf:type building:Wall .
+
+ex:Wall02_Storey03 rdf:type building:Wall .
+
+
+ex:Task007_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Even the existing facade"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T07 ;
+                renp:hasEndTime ex:Instant02_T07 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasRisk ex:Risk006 ;
+                renp:hasRisk ex:Risk007 ;
+                renp:hasNextTask ex:Task008_Pr001_P01 .
+
+ex:Instant01_T07 rdf:type time:Instant ;
+                time:inXSDDate "2021-07-01"^^xsd:date .
+
+ex:Instant02_T07 rdf:type time:Instant ;
+                time:inXSDDate "2021-07-30"^^xsd:date .
+
+ex:Task008_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Create ventilated facade or SATE by subcontractor"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T08 ;
+                renp:hasEndTime ex:Instant02_T08 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasRisk ex:Risk006 ;
+                renp:hasRisk ex:Risk007 ;
+                renp:hasNextTask ex:Task009_Pr001_P01 .
+
+ex:Instant01_T08 rdf:type time:Instant ;
+                time:inXSDDate "2021-08-01"^^xsd:date .
+
+ex:Instant02_T08 rdf:type time:Instant ;
+                time:inXSDDate "2021-08-30"^^xsd:date .
+
+ex:Task009_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Finishing window surface"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T09 ;
+                renp:hasEndTime ex:Instant02_T09 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasRisk ex:Risk006 ;
+                renp:hasRisk ex:Risk007 ;
+                renp:hasNextTask ex:Task010_Pr001_P01 .
+
+ex:Instant01_T09 rdf:type time:Instant ;
+                time:inXSDDate "2021-09-01"^^xsd:date .
+
+ex:Instant02_T09 rdf:type time:Instant ;
+                time:inXSDDate "2021-09-30"^^xsd:date .
+
+ex:Task010_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Final quality check"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T10 ;
+                renp:hasEndTime ex:Instant02_T10 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task011_Pr001_P01 .
+
+ex:Instant01_T10 rdf:type time:Instant ;
+                time:inXSDDate "2021-10-01"^^xsd:date .
+
+ex:Instant02_T10 rdf:type time:Instant ;
+                time:inXSDDate "2021-10-30"^^xsd:date .
+
+ex:Task011_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Install and uncovering of equipment on the facade"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T11 ;
+                renp:hasEndTime ex:Instant02_T11 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task012_Pr001_P01 .
+
+ex:Instant01_T11 rdf:type time:Instant ;
+                time:inXSDDate "2021-11-01"^^xsd:date .
+
+ex:Instant02_T11 rdf:type time:Instant ;
+                time:inXSDDate "2021-11-30"^^xsd:date .
+
+ex:Task012_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Disassemble scaffolding"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T12 ;
+                renp:hasEndTime ex:Instant02_T12 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasNextTask ex:Task013_Pr001_P01 .
+
+ex:Instant01_T12 rdf:type time:Instant ;
+                time:inXSDDate "2021-12-01"^^xsd:date .
+
+ex:Instant02_T12 rdf:type time:Instant ;
+                time:inXSDDate "2021-12-30"^^xsd:date .
+
+ex:Task013_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Cleaning"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T13 ;
+                renp:hasEndTime ex:Instant02_T13 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 ;
+                renp:hasRisk ex:Risk005 ;
+                renp:hasNextTask ex:Task014_Pr001_P01 .
+
+ex:Instant01_T13 rdf:type time:Instant ;
+                time:inXSDDate "2022-01-01"^^xsd:date .
+
+ex:Instant02_T13 rdf:type time:Instant ;
+                time:inXSDDate "2022-01-30"^^xsd:date .
+
+ex:Task014_Pr001_P01 rdf:type renp:Task ;
+                rdfs:label "Final check"^^xsd:string ;
+                renp:hasStartTime ex:Instant01_T14 ;
+                renp:hasEndTime ex:Instant02_T14 ;
+                renp:hasRisk ex:Risk001 ;
+                renp:hasRisk ex:Risk003 ;
+                renp:hasRisk ex:Risk004 .
+
+ex:Instant01_T14 rdf:type time:Instant ;
+                time:inXSDDate "2022-02-01"^^xsd:date .
+
+ex:Instant02_T14 rdf:type time:Instant ;
+                time:inXSDDate "2022-02-30"^^xsd:date .
