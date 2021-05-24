@@ -19,8 +19,8 @@
                                                                         "Serge Chávez-Feria" ;
                                                              dc:description "Ontology code created by Chowlk" ;
                                                              dc:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                                             dc:title "Renovation Processes and Work Orders Ontology" ;
                                                              dc:publisher "http://www.oeg-upm.net/" ;
+                                                             dc:title "Renovation Processes and Work Orders Ontology" ;
                                                              vann:preferredNamespacePrefix "renp" ;
                                                              rdfs:comment "Ontology to model building renovation processes and work orders sent to the workers on-site."@en ;
                                                              owl:versionInfo "0.0.2" .
@@ -41,12 +41,12 @@ dc:description rdf:type owl:AnnotationProperty .
 dc:license rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/elements/1.1/publisher
 dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -276,6 +276,10 @@ building:Storey rdf:type owl:Class ;
 ###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI
 kpi:KPI rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty kpi:hasKPIValue ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty renp:identifier ;
                           owl:cardinality "1"^^xsd:nonNegativeInteger
                         ] ,
