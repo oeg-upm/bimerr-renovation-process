@@ -1,98 +1,146 @@
-<h2 id="overv" class="list">Renovation Process Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="overv" class="list">Renovation Processes and Work Orders Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
-      <a href="#Actor"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#Actor">Actor</a>
-   </li>
-   <li>
       <a href="#http://bimerr.iot.linkeddata.es/def/building#Element"
          title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI">KPI</a>
    </li>
    <li>
-      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI"
-         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPI">KPI</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPIValue"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPIValue">KPI value</a>
    </li>
    <li>
       <a href="#Process"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#Process">Process</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Process">Process</a>
    </li>
    <li>
-      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
-         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project">Project</a>
-   </li>
-   <li>
-      <a href="#Resource"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#Resource">Resource</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#Project"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#Project">Project</a>
    </li>
    <li>
       <a href="#http://bimerr.iot.linkeddata.es/def/building#Space"
          title="http://bimerr.iot.linkeddata.es/def/building#Space">Space</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#doneBy"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#doneBy">done by</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/building#Storey"
+         title="http://bimerr.iot.linkeddata.es/def/building#Storey">Storey</a>
    </li>
    <li>
-      <a href="#hasActualFinish"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#hasActualFinish">has actual finish</a>
+      <a href="#Task"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Task">Task</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/UnitOfMeasure" title="https://saref.etsi.org/core/UnitOfMeasure">Unit of measure</a>
+   </li>
+   <li>
+      <a href="#Worker"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Worker">Worker</a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#executedBy"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#executedBy">executed by</a>
    </li>
    <li>
       <a href="#hasKPI"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#hasKPI">has KPI</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI">has KPI</a>
    </li>
    <li>
-      <a href="#hasPlannedFinish"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#hasPlannedFinish">has planned finish</a>
-   </li>
-   <li>
-      <a href="#hasPlannedStart"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#hasPlannedStart">has planned start</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue">has KPI Value</a>
    </li>
    <li>
       <a href="#hasProcess"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#hasProcess">has process</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasProcess">has process</a>
+   </li>
+   <li>
+      <a href="#hasTask"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasTask">has task</a>
    </li>
    <li>
       <a href="#performedAtSpace"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#performedAtSpace">performed at space</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtSpace">performed at space</a>
+   </li>
+   <li>
+      <a href="#performedAtStorey"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtStorey">performed at storey</a>
    </li>
    <li>
       <a href="#performedOverComponent"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#performedOverComponent">performed over component</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedOverComponent">performed over component</a>
    </li>
    <li>
-      <a href="#requiresResource"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#requiresResource">requires resource</a>
-   </li>
-   <li>
-      <a href="#hasActualStart"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#hasActualStart">The actual time the process finished.</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#unitOfMeasure"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#unitOfMeasure">unit of measure</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#absoluteDeviation"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#absoluteDeviation">absolute deviation</a>
+   </li>
+   <li>
+      <a href="#actualFinish"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinish">actual finish</a>
+   </li>
+   <li>
+      <a href="#actualStart"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStart">actual start</a>
+   </li>
+   <li>
+      <a href="#email"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#email">email</a>
+   </li>
+   <li>
       <a href="#executionStatus"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#executionStatus">execution status</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#executionStatus">execution status</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/hasValue" title="https://saref.etsi.org/core/hasValue">has value</a>
    </li>
    <li>
       <a href="#identifier"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#identifier">identifier</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#identifier">identifier</a>
    </li>
    <li>
       <a href="#http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
-         title="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier">Ifc identifier</a>
+         title="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier">ifc identifier</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/time#inXSDDateTimeStamp" title="http://www.w3.org/2006/time#inXSDDateTimeStamp">in XSD date time stamp</a>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#maxValue"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#maxValue">max value</a>
+   </li>
+   <li>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#minValue"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#minValue">min value</a>
    </li>
    <li>
       <a href="#name"
-         title="http://bimerr.iot.linkeddata.es/def/renovation-process#name">name</a>
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#name">name</a>
+   </li>
+   <li>
+      <a href="#plannedFinish"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinish">planned finish</a>
+   </li>
+   <li>
+      <a href="#plannedStart"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStart">planned start</a>
+   </li>
+   <li>
+      <a href="#relativeDeviation"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#relativeDeviation">relative deviation</a>
+   </li>
+   <li>
+      <a href="#result"
+         title="http://bimerr.iot.linkeddata.es/def/renovation-processes#result">result</a>
+   </li>
+   <li>
+      <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#tolerance"
+         title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#tolerance">tolerance</a>
    </li>
 </ul>
