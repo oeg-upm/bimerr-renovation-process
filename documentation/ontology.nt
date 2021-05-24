@@ -46,6 +46,7 @@
 # 
 # http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPIValue> .
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an entity with specific kpi values."@en .
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue> <http://www.w3.org/2000/01/rdf-schema#label> "has KPI Value"@en .
 # 

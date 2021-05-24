@@ -92,6 +92,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue">
+        <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPIValue"/>
         <rdfs:comment xml:lang="en">Relates an entity with specific kpi values.</rdfs:comment>
         <rdfs:label xml:lang="en">has KPI Value</rdfs:label>
     </owl:ObjectProperty>

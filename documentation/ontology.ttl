@@ -51,6 +51,7 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:range <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPIValue> ;
                                                                              rdfs:comment "Relates an entity with specific kpi values."@en ;
                                                                              rdfs:label "has KPI Value"@en .
 
