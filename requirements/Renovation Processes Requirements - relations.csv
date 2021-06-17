@@ -1,0 +1,25 @@
+Concept,Relation,Description,"Target object
+(should appear in the ""Concept list"")",Min Cardinality,Max cardinality,"Unit of measure
+(if applicable)","(ignore if not sure or not applicable)
+Other characteristics:
+symmetric, transitive, has some special behaviour or meaning?
+etc.",Needed by,standards
+Process,involvesTask,,Task,,,,,,
+,isDoneBy,,Stakeholder,,,,,,
+Task,hasRisk,,Risk,,,,,,
+,hasStartTime,,Instant,,,,,,
+,hasEndTime,,Instant,,,,,,
+,hasPreviousTask,,Task,,,,,,
+,hasNextTask,,Task,,,,,,
+,isPerformedOver,,Building Element,,,,,,
+,performedAtSpace,,Space,,,,,,
+,performedAtApartment,,Apartment,,,,,,
+,performedAtStorey,,Storey,,,,,,
+,hasKPI,,KPI,,,,,,
+,hasPerformanceParameter,,Performance Parameter,,,,,,
+,isDoneBy,,Stakeholder,,,,,,
+Equipment Resource,subClassOf,,Resource,,,,,,
+Material Resource,subClassOf,,Resource,,,,,,
+Human Resource,subClassOf,,Resource,,,,,,
+Stakeholder,subClassOf,,Human Resource,,,,,,
+Individual/Worker,isPartOf,,Organization,,,,,,
