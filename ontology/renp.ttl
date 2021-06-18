@@ -153,6 +153,13 @@ kpi:minValue rdf:type owl:DatatypeProperty ;
              rdfs:comment "Lower limit to define a KPI Value."@en ;
              rdfs:label "min value"@en .
 
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue
+renp:healthAndSecurityIssue rdf:type owl:DatatypeProperty ;
+                      rdfs:domain renp:Task ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Indicates a possible health and security issue related to an specific task." ;
+                      rdfs:label "health and security issue"@en .
+
 
 ###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#tolerance
 kpi:tolerance rdf:type owl:DatatypeProperty ;
@@ -181,7 +188,7 @@ renp:email rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#executionStatus
 renp:executionStatus rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:string ;
-                     rdfs:comment "Indicated the state of the work order - possible values: ABORTED, COMPLETED, DOWNLOADED, PAUSED, RUNNING" ;
+                     rdfs:comment "Indicates the state of the work order - possible values: ABORTED, COMPLETED, DOWNLOADED, PAUSED, RUNNING" ;
                      rdfs:label "execution status" .
 
 
@@ -406,6 +413,10 @@ renp:Task rdf:type owl:Class ;
                           [ rdf:type owl:Restriction ;
                             owl:onProperty renp:result ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:healthAndSecurityIssue ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
                           ] ;
           rdfs:label "Task" .
 
