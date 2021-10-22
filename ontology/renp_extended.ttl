@@ -1,0 +1,654 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/renovation-processes#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kpi: <http://bimerr.iot.linkeddata.es/def/key-performance-indicators#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix renp: <http://bimerr.iot.linkeddata.es/def/renovation-processes#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix building: <http://bimerr.iot.linkeddata.es/def/building#> .
+@base <http://bimerr.iot.linkeddata.es/def/renovation-processes#> .
+
+<http://bimerr.iot.linkeddata.es/def/renovation-processes#> rdf:type owl:Ontology ;
+                                                             dc:creator "María Poveda-Villalón" ,
+                                                                        "Serge Chávez-Feria" ;
+                                                             dc:description "Ontology code created by Chowlk" ;
+                                                             dc:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                                             dc:publisher "http://www.oeg-upm.net/" ;
+                                                             dc:title "Renovation Processes and Work Orders Ontology" ;
+                                                             vann:preferredNamespacePrefix "renp" ;
+                                                             rdfs:comment "Ontology to model building renovation processes and work orders sent to the workers on-site."@en ;
+                                                             owl:versionInfo "0.0.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#hasKPIValue
+kpi:hasKPIValue rdf:type owl:ObjectProperty ;
+                rdfs:range kpi:KPIValue ;
+                rdfs:comment "Relates an entity with specific kpi values."@en ;
+                rdfs:label "has KPI Value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#unitOfMeasure
+kpi:unitOfMeasure rdf:type owl:ObjectProperty ;
+                  rdfs:range saref:UnitOfMeasure ;
+                  rdfs:comment "Indicates the unit of measure of a kpi value."@en ;
+                  rdfs:label "unit of measure"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#executedBy
+renp:executedBy rdf:type owl:ObjectProperty ;
+                rdfs:range renp:Worker ;
+                rdfs:comment "Indicates who is responsable for executing a process or task" ;
+                rdfs:label "executed by" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute
+renp:hasAttribute rdf:type owl:ObjectProperty ;
+                  rdfs:domain renp:Task ;
+                  rdfs:range renp:Attribute ;
+                  rdfs:comment "Relationship between a task and its attributes"@en ;
+                  rdfs:label "has attribute"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI
+renp:hasKPI rdf:type owl:ObjectProperty ;
+            rdfs:comment "Relates an entity with specific kpi definitions."@en ;
+            rdfs:label "has KPI"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasProcess
+renp:hasProcess rdf:type owl:ObjectProperty ;
+                rdfs:domain kpi:Project ;
+                rdfs:range renp:Process ;
+                rdfs:comment "Relates a project with its processes" ;
+                rdfs:label "has process" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasTask
+renp:hasTask rdf:type owl:ObjectProperty ;
+             rdfs:domain renp:Process ;
+             rdfs:range renp:Task ;
+             rdfs:comment "Indicates the tasks involved in a process" ;
+             rdfs:label "has task" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtSpace
+renp:performedAtSpace rdf:type owl:ObjectProperty ;
+                      rdfs:domain renp:Process ;
+                      rdfs:range building:Space ;
+                      rdfs:comment "Relate a process with a space" ;
+                      rdfs:label "performed at space" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtStorey
+renp:performedAtStorey rdf:type owl:ObjectProperty ;
+                       rdfs:domain renp:Process ;
+                       rdfs:range building:Storey ;
+                       rdfs:comment "Relate a process with a storey" ;
+                       rdfs:label "performed at storey" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
+building:ifcIdentifier rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Global identifier in the IFC file" ;
+                       rdfs:label "ifc identifier" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#absoluteDeviation
+kpi:absoluteDeviation rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:double ;
+                      rdfs:label "absolute deviation"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#maxValue
+kpi:maxValue rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:float ;
+             rdfs:comment "Upper limit to define a KPI Value."@en ;
+             rdfs:label "max value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#minValue
+kpi:minValue rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:float ;
+             rdfs:comment "Lower limit to define a KPI Value."@en ;
+             rdfs:label "min value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#tolerance
+kpi:tolerance rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Tolerance error in the value of a KPI."@en ;
+              rdfs:label "tolerance"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinish
+renp:actualFinish rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:label "actual finish"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStart
+renp:actualStart rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:label "actual start"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#attributeValue
+renp:attributeValue rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:int ;
+                    rdfs:label "attribute value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#comment
+renp:comment rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "comment"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#duration
+renp:duration rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:duration ;
+              rdfs:label "duration"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#dustIssue
+renp:dustIssue rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "dust issue"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#electricalIssue
+renp:electricalIssue rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "electrical issue"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#email
+renp:email rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Email of the worker" ;
+           rdfs:label "email" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#executionStatus
+renp:executionStatus rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Indicates the state of the work order - possible values: ABORTED, COMPLETED, DOWNLOADED, PAUSED, RUNNING" ;
+                     rdfs:label "execution status" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#gasIssue
+renp:gasIssue rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "gas issue"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#generated
+renp:generated rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "generated"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue
+renp:healthAndSecurityIssue rdf:type owl:DatatypeProperty ;
+                            rdfs:domain renp:Task ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Indicates a possible health and security issue related to an specific task." ;
+                            rdfs:label "health and security issue"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId
+renp:i3dResultId rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "i3d result id"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#i3did
+renp:i3did rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Identifier in the i3d tool"@en ;
+           rdfs:label "i3d id"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#name
+renp:name rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Name of the entity" ;
+          rdfs:label "name" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#noiseIssue
+renp:noiseIssue rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "noise issue"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#planned
+renp:planned rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "planned"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinish
+renp:plannedFinish rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "planned finish"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStart
+renp:plannedStart rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:label "planned start"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#processId
+renp:processId rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Identifier of the entity" ;
+               rdfs:label "process id"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#processName
+renp:processName rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "process name"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#real
+renp:real rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "real"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#relativeDeviation
+renp:relativeDeviation rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:double ;
+                       rdfs:label "relative deviation"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#result
+renp:result rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Indicates the state of the task, possible values are: YES (done), NO (not done), PROBLEM (finished with problems), STARTED, READY" ;
+            rdfs:label "result" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#start
+renp:start rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:dateTime ;
+           rdfs:label "start"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#taskId
+renp:taskId rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "task id"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#telecommunicationIssue
+renp:telecommunicationIssue rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:boolean ;
+                            rdfs:label "telecommunication issue"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#waterIssue
+renp:waterIssue rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "water issue"@en .
+
+
+###  https://saref.etsi.org/core/hasValue
+saref:hasValue rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Numeric quantity of a KPI value."@en ;
+               rdfs:label "has value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/building#Element
+building:Element rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty building:ifcIdentifier ;
+                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty renp:name ;
+                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
+                 rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+                 rdfs:label "Element" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Space
+building:Space rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty building:ifcIdentifier ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:name ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
+               rdfs:label "Space" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Storey
+building:Storey rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty building:ifcIdentifier ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty renp:name ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
+                rdfs:comment "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."@en ;
+                rdfs:label "Storey" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI
+kpi:KPI rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty kpi:hasKPIValue ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty renp:name ;
+                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty renp:processId ;
+                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                        ] ;
+        rdfs:comment "Key performance indicators related to building renovation projects"@en ;
+        rdfs:label "KPI"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPIValue
+kpi:KPIValue rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty kpi:unitOfMeasure ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty kpi:tolerance ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty kpi:absoluteDeviation ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty kpi:maxValue ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty kpi:minValue ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:relativeDeviation ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty saref:hasValue ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:comment "Key performance indicator values calculated for a specific renovation project and scenario."@en ;
+             rdfs:label "KPI value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicators#Project
+kpi:Project rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty renp:hasProcess ;
+                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty renp:name ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty renp:processId ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+            rdfs:comment "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia)."@en ;
+            rdfs:label "Project" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute
+renp:Attribute rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:attributeValue ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:generated ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:name ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:planned ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:real ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty renp:comment ;
+                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Attribute of the task"@en ;
+               rdfs:label "Attribute"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Process
+renp:Process rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:hasKPI ;
+                               owl:allValuesFrom kpi:KPI
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:hasTask ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:performedAtSpace ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:performedAtStorey ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:executedBy ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:actualFinish ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:actualStart ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:executionStatus ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:i3did ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:name ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:plannedFinish ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:plannedStart ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:processId ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:processName ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:label "Process" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Task
+renp:Task rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:hasAttribute ;
+                            owl:allValuesFrom renp:Attribute
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:hasKPI ;
+                            owl:allValuesFrom kpi:KPI
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:executedBy ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:healthAndSecurityIssue ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:i3dResultId ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:name ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:result ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:taskId ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:duration ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:dustIssue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:electricalIssue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:gasIssue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:noiseIssue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:start ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:telecommunicationIssue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:waterIssue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
+          rdfs:label "Task" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Worker
+renp:Worker rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty renp:email ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty renp:processId ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+            rdfs:label "Worker" .
+
+
+###  https://saref.etsi.org/core/UnitOfMeasure
+saref:UnitOfMeasure rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty renp:name ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
+                    rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
+                    rdfs:label "Unit of measure"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
