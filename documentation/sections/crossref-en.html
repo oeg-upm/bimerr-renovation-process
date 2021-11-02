@@ -4,6 +4,10 @@ This section provides details for each class and property defined by Renovation 
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#Attribute"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute">Attribute</a>
+      </li>
+      <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/building#Element"
             title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
       </li>
@@ -43,6 +47,27 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Worker">Worker</a>
       </li>
    </ul>
+   <div class="entity" id="Attribute">
+      <h3>Attribute<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute</p>
+      <div class="comment">
+         <span class="markdown">Attribute of the task</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasAttribute"
+               title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute">has attribute</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/building#Element">
       <h3>Element<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -56,12 +81,6 @@ This section provides details for each class and property defined by Renovation 
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#performedOverComponent"
-               title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedOverComponent">performed over component</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI">
@@ -118,8 +137,6 @@ This section provides details for each class and property defined by Renovation 
                title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtSpace">performed at space</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#performedAtStorey"
                title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtStorey">performed at storey</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#performedOverComponent"
-               title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedOverComponent">performed over component</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -205,7 +222,9 @@ This section provides details for each class and property defined by Renovation 
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#healthAndSecurityIssue"
+            <a href="#hasAttribute"
+               title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute">has attribute</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#healthAndSecurityIssue"
                title="http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue">health and security issue</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -264,6 +283,10 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#executedBy">executed by</a>
       </li>
       <li>
+         <a href="#hasAttribute"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute">has attribute</a>
+      </li>
+      <li>
          <a href="#hasKPI"
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI">has KPI</a>
       </li>
@@ -288,10 +311,6 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtStorey">performed at storey</a>
       </li>
       <li>
-         <a href="#performedOverComponent"
-            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#performedOverComponent">performed over component</a>
-      </li>
-      <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#unitOfMeasure"
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#unitOfMeasure">unit of measure</a>
       </li>
@@ -312,6 +331,33 @@ This section provides details for each class and property defined by Renovation 
             <dd>
                <a href="#Worker"
                   title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Worker">Worker</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAttribute">
+      <h3>has attribute<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a task and its attributes</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Task"
+                  title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Attribute"
+                  title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute">Attribute</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -457,30 +503,6 @@ This section provides details for each class and property defined by Renovation 
          </dl>
       </div>
    </div>
-   <div class="entity" id="performedOverComponent">
-      <h3>performed over component<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#performedOverComponent</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Process"
-                  title="http://bimerr.iot.linkeddata.es/def/renovation-processes#Process">Process</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://bimerr.iot.linkeddata.es/def/building#Element"
-                  title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#unitOfMeasure">
       <h3>unit of measure<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -509,12 +531,28 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#absoluteDeviation">absolute deviation</a>
       </li>
       <li>
-         <a href="#actualFinish"
-            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinish">actual finish</a>
+         <a href="#actualFinishDateTime"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinishDateTime">actual finish date time</a>
       </li>
       <li>
-         <a href="#actualStart"
-            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStart">actual start</a>
+         <a href="#actualStartDateTime"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStartDateTime">actual start date time</a>
+      </li>
+      <li>
+         <a href="#attributeValue"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#attributeValue">attribute value</a>
+      </li>
+      <li>
+         <a href="#comment"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#comment">comment</a>
+      </li>
+      <li>
+         <a href="#creationDate"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#creationDate">creation date</a>
+      </li>
+      <li>
+         <a href="#duration"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#duration">duration</a>
       </li>
       <li>
          <a href="#dustIssue"
@@ -537,6 +575,10 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#gasIssue">gas issue</a>
       </li>
       <li>
+         <a href="#generated"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#generated">generated</a>
+      </li>
+      <li>
          <a href="#https://saref.etsi.org/core/hasValue" title="https://saref.etsi.org/core/hasValue">has value</a>
       </li>
       <li>
@@ -544,8 +586,12 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue">health and security issue</a>
       </li>
       <li>
-         <a href="#identifier"
-            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#identifier">identifier</a>
+         <a href="#i3did"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#i3did">i3d id</a>
+      </li>
+      <li>
+         <a href="#i3dResultId"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId">i3d result id</a>
       </li>
       <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
@@ -568,12 +614,28 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#noiseIssue">noise issue</a>
       </li>
       <li>
-         <a href="#plannedFinish"
-            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinish">planned finish</a>
+         <a href="#planned"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#planned">planned</a>
       </li>
       <li>
-         <a href="#plannedStart"
-            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStart">planned start</a>
+         <a href="#plannedFinishDateTime"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime">planned finish date time</a>
+      </li>
+      <li>
+         <a href="#plannedStartDateTime"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStartDateTime">planned start date time</a>
+      </li>
+      <li>
+         <a href="#processId"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#processId">process id</a>
+      </li>
+      <li>
+         <a href="#processName"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#processName">process name</a>
+      </li>
+      <li>
+         <a href="#real"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#real">real</a>
       </li>
       <li>
          <a href="#relativeDeviation"
@@ -584,12 +646,24 @@ This section provides details for each class and property defined by Renovation 
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#result">result</a>
       </li>
       <li>
+         <a href="#start"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#start">start</a>
+      </li>
+      <li>
+         <a href="#taskId"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#taskId">task id</a>
+      </li>
+      <li>
          <a href="#telecommunicationIssue"
             title="http://bimerr.iot.linkeddata.es/def/renovation-processes#telecommunicationIssue">telecommunication issue</a>
       </li>
       <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicators#tolerance"
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicators#tolerance">tolerance</a>
+      </li>
+      <li>
+         <a href="#version"
+            title="http://bimerr.iot.linkeddata.es/def/renovation-processes#version">version</a>
       </li>
       <li>
          <a href="#waterIssue"
@@ -612,21 +686,101 @@ This section provides details for each class and property defined by Renovation 
          </dl>
       </div>
    </div>
-   <div class="entity" id="actualFinish">
-      <h3>actual finish<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="actualFinishDateTime">
+      <h3>actual finish date time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinish</p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinishDateTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
    </div>
-   <div class="entity" id="actualStart">
-      <h3>actual start<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="actualStartDateTime">
+      <h3>actual start date time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStart</p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStartDateTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="attributeValue">
+      <h3>attribute value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#attributeValue</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="comment">
+      <h3>comment<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#comment</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="creationDate">
+      <h3>creation date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#creationDate</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="duration">
+      <h3>duration<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#duration</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="dustIssue">
       <h3>dust issue<sup class="type-dp" title="data property">dp</sup>
@@ -714,6 +868,22 @@ This section provides details for each class and property defined by Renovation 
          </dl>
       </div>
    </div>
+   <div class="entity" id="generated">
+      <h3>generated<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#generated</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://saref.etsi.org/core/hasValue">
       <h3>has value<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -750,16 +920,32 @@ This section provides details for each class and property defined by Renovation 
          </dl>
       </div>
    </div>
-   <div class="entity" id="identifier">
-      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="i3did">
+      <h3>i3d id<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#identifier</p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#i3did</p>
       <div class="comment">
-         <span class="markdown">Identifier of the entity</span>
+         <span class="markdown">Identifier in the i3d tool</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="i3dResultId">
+      <h3>i3d result id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId</p>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -861,21 +1047,104 @@ This section provides details for each class and property defined by Renovation 
          </dl>
       </div>
    </div>
-   <div class="entity" id="plannedFinish">
-      <h3>planned finish<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="planned">
+      <h3>planned<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinish</p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#planned</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
    </div>
-   <div class="entity" id="plannedStart">
-      <h3>planned start<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="plannedFinishDateTime">
+      <h3>planned finish date time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStart</p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="plannedStartDateTime">
+      <h3>planned start date time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStartDateTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="processId">
+      <h3>process id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#processId</p>
+      <div class="comment">
+         <span class="markdown">Identifier of the entity</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="processName">
+      <h3>process name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#processName</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="real">
+      <h3>real<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#real</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="relativeDeviation">
       <h3>relative deviation<sup class="type-dp" title="data property">dp</sup>
@@ -903,6 +1172,38 @@ This section provides details for each class and property defined by Renovation 
       <div class="comment">
          <span class="markdown">Indicates the state of the task, possible values are: YES (done), NO (not done), PROBLEM (finished with problems), STARTED, READY</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="start">
+      <h3>start<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#start</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="taskId">
+      <h3>task id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#taskId</p>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -943,6 +1244,22 @@ This section provides details for each class and property defined by Renovation 
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/renovation-processes#version</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
