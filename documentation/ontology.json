@@ -121,22 +121,20 @@
 }, {
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#attributeValue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedSpace"
   } ]
 }, {
   "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#generated"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedStorey"
   } ]
 }, {
   "@id" : "_:genid22",
@@ -146,27 +144,27 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#name"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#message"
   } ]
 }, {
   "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#planned"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#dustIssue"
   } ]
 }, {
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#real"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#electricalIssue"
   } ]
 }, {
   "@id" : "_:genid25",
@@ -176,46 +174,46 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#comment"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#gasIssue"
   } ]
 }, {
   "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#noiseIssue"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#telecommunicationIssue"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#waterIssue"
+  } ]
+}, {
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasTask"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtSpace"
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtStorey"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -230,32 +228,32 @@
 }, {
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#executedBy"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasTask"
   } ]
 }, {
   "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinishDateTime"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtSpace"
   } ]
 }, {
   "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStartDateTime"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#performedAtStorey"
   } ]
 }, {
   "@id" : "_:genid33",
@@ -265,7 +263,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#creationDate"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#executedBy"
   } ]
 }, {
   "@id" : "_:genid34",
@@ -275,7 +273,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#executionStatus"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedProject"
   } ]
 }, {
   "@id" : "_:genid35",
@@ -285,7 +283,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#i3did"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinishDateTime"
   } ]
 }, {
   "@id" : "_:genid36",
@@ -295,7 +293,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#name"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStartDateTime"
   } ]
 }, {
   "@id" : "_:genid37",
@@ -305,7 +303,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#creationDate"
   } ]
 }, {
   "@id" : "_:genid38",
@@ -315,7 +313,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStartDateTime"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#executionStatus"
   } ]
 }, {
   "@id" : "_:genid39",
@@ -325,7 +323,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#processId"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#i3did"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -345,7 +343,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#processName"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#name"
   } ]
 }, {
   "@id" : "_:genid41",
@@ -355,19 +353,59 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#version"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime"
   } ]
 }, {
   "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute"
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStartDateTime"
   } ]
 }, {
   "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#processId"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#processName"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#version"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#HealthSafetyIssue"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasIssue"
+  } ]
+}, {
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicators#KPI"
@@ -376,7 +414,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -386,46 +424,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#executedBy"
   } ]
 }, {
-  "@id" : "_:genid45",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue"
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#name"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#result"
-  } ]
-}, {
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
@@ -433,7 +431,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#taskId"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -448,32 +446,32 @@
 }, {
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#duration"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#name"
   } ]
 }, {
   "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#dustIssue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#result"
   } ]
 }, {
   "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#electricalIssue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#taskId"
   } ]
 }, {
   "@id" : "_:genid53",
@@ -483,7 +481,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#gasIssue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinishDateTime"
   } ]
 }, {
   "@id" : "_:genid54",
@@ -493,7 +491,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#noiseIssue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualStartDateTime"
   } ]
 }, {
   "@id" : "_:genid55",
@@ -503,7 +501,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#start"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#duration"
   } ]
 }, {
   "@id" : "_:genid56",
@@ -513,7 +511,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#telecommunicationIssue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime"
   } ]
 }, {
   "@id" : "_:genid57",
@@ -523,17 +521,17 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#waterIssue"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedStartDateTime"
   } ]
 }, {
   "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#email"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#start"
   } ]
 }, {
   "@id" : "_:genid59",
@@ -543,7 +541,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#processId"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#email"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -557,6 +555,16 @@
   } ]
 }, {
   "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#processId"
+  } ]
+}, {
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -824,15 +832,15 @@
     "@value" : "0.0.3"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#HealthSafetyIssue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Attribute of the task"
+    "@value" : "Health and safety issues related to an specific task."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Attribute"
+    "@value" : "Health and safety issue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid20"
@@ -846,6 +854,12 @@
     "@id" : "_:genid24"
   }, {
     "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
+  }, {
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Process",
@@ -854,12 +868,6 @@
     "@value" : "Process"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid26"
-  }, {
-    "@id" : "_:genid27"
-  }, {
-    "@id" : "_:genid28"
-  }, {
     "@id" : "_:genid29"
   }, {
     "@id" : "_:genid30"
@@ -885,6 +893,14 @@
     "@id" : "_:genid40"
   }, {
     "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid44"
+  }, {
+    "@id" : "_:genid45"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Task",
@@ -893,14 +909,6 @@
     "@value" : "Task"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid42"
-  }, {
-    "@id" : "_:genid43"
-  }, {
-    "@id" : "_:genid44"
-  }, {
-    "@id" : "_:genid45"
-  }, {
     "@id" : "_:genid46"
   }, {
     "@id" : "_:genid47"
@@ -924,6 +932,8 @@
     "@id" : "_:genid56"
   }, {
     "@id" : "_:genid57"
+  }, {
+    "@id" : "_:genid58"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Worker",
@@ -932,9 +942,9 @@
     "@value" : "Worker"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid58"
-  }, {
     "@id" : "_:genid59"
+  }, {
+    "@id" : "_:genid60"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#actualFinishDateTime",
@@ -955,26 +965,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#attributeValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "attribute value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#int"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#comment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "comment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#creationDate",
@@ -1063,31 +1053,21 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#generated",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "generated"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasIssue",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relationship between a task and its attributes"
+    "@value" : "Relates an specific task to an issue."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Task"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has attribute"
+    "@value" : "has issue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#HealthSafetyIssue"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI",
@@ -1131,22 +1111,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Task"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicates a possible health and security issue related to an specific task."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#Task"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "health and security issue"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1166,6 +1130,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "i3d id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#message",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Message describing the health and safety issue."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "message"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1223,16 +1201,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#planned",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "planned"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1276,14 +1244,46 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#real",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation to connect a process or workorder with a project."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "real"
+    "@value" : "related project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicators#Project"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an issue with a space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedStorey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an issue with a storey."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related storey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/renovation-processes#relativeDeviation",
@@ -1390,7 +1390,7 @@
     "@value" : "Unit of measure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid60"
+    "@id" : "_:genid61"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/hasValue",

@@ -86,12 +86,12 @@ renp:executedBy rdf:type owl:ObjectProperty ;
                 rdfs:label "executed by" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasAttribute
-renp:hasAttribute rdf:type owl:ObjectProperty ;
-                  rdfs:domain renp:Task ;
-                  rdfs:range renp:Attribute ;
-                  rdfs:comment "Relationship between a task and its attributes"@en ;
-                  rdfs:label "has attribute"@en .
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasIssue
+renp:hasIssue rdf:type owl:ObjectProperty ;
+              rdfs:domain renp:Task ;
+              rdfs:range renp:HealthSafetyIssue ;
+              rdfs:comment "Relates an specific task to an issue."@en ;
+              rdfs:label "has issue"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#hasKPI
@@ -130,6 +130,27 @@ renp:performedAtStorey rdf:type owl:ObjectProperty ;
                        rdfs:range building:Storey ;
                        rdfs:comment "Relate a process with a storey" ;
                        rdfs:label "performed at storey" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedProject
+renp:relatedProject rdf:type owl:ObjectProperty ;
+                    rdfs:range kpi:Project ;
+                    rdfs:comment "Relation to connect a process or workorder with a project."@en ;
+                    rdfs:label "related project"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedSpace
+renp:relatedSpace rdf:type owl:ObjectProperty ;
+                  rdfs:range building:Space ;
+                  rdfs:comment "Relates an issue with a space."@en ;
+                  rdfs:label "related space"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#relatedStorey
+renp:relatedStorey rdf:type owl:ObjectProperty ;
+                   rdfs:range building:Storey ;
+                   rdfs:comment "Relates an issue with a storey."@en ;
+                   rdfs:label "related storey"@en .
 
 
 #################################################################
@@ -182,18 +203,6 @@ renp:actualStartDateTime rdf:type owl:DatatypeProperty ;
                          rdfs:label "actual start date time"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#attributeValue
-renp:attributeValue rdf:type owl:DatatypeProperty ;
-                    rdfs:range xsd:int ;
-                    rdfs:label "attribute value"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#comment
-renp:comment rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:string ;
-             rdfs:label "comment"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#creationDate
 renp:creationDate rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:dateTime ;
@@ -238,20 +247,6 @@ renp:gasIssue rdf:type owl:DatatypeProperty ;
               rdfs:label "gas issue"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#generated
-renp:generated rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:boolean ;
-               rdfs:label "generated"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#healthAndSecurityIssue
-renp:healthAndSecurityIssue rdf:type owl:DatatypeProperty ;
-                            rdfs:domain renp:Task ;
-                            rdfs:range xsd:string ;
-                            rdfs:comment "Indicates a possible health and security issue related to an specific task." ;
-                            rdfs:label "health and security issue"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#i3dResultId
 renp:i3dResultId rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
@@ -265,6 +260,13 @@ renp:i3did rdf:type owl:DatatypeProperty ;
            rdfs:label "i3d id"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#message
+renp:message rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Message describing the health and safety issue."@en ;
+             rdfs:label "message"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#name
 renp:name rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
@@ -276,12 +278,6 @@ renp:name rdf:type owl:DatatypeProperty ;
 renp:noiseIssue rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:boolean ;
                 rdfs:label "noise issue"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#planned
-renp:planned rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:boolean ;
-             rdfs:label "planned"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#plannedFinishDateTime
@@ -307,12 +303,6 @@ renp:processId rdf:type owl:DatatypeProperty ;
 renp:processName rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
                  rdfs:label "process name"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#real
-renp:real rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:boolean ;
-          rdfs:label "real"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#relativeDeviation
@@ -480,34 +470,46 @@ kpi:Project rdf:type owl:Class ;
             rdfs:label "Project" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Attribute
-renp:Attribute rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty renp:attributeValue ;
-                                 owl:cardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty renp:generated ;
-                                 owl:cardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty renp:name ;
-                                 owl:cardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty renp:planned ;
-                                 owl:cardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty renp:real ;
-                                 owl:cardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty renp:comment ;
-                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                               ] ;
-               rdfs:comment "Attribute of the task"@en ;
-               rdfs:label "Attribute"@en .
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#HealthSafetyIssue
+renp:HealthSafetyIssue rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:relatedSpace ;
+                                         owl:allValuesFrom building:Space
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:relatedStorey ;
+                                         owl:allValuesFrom building:Storey
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:message ;
+                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:dustIssue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:electricalIssue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:gasIssue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:noiseIssue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:telecommunicationIssue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty renp:waterIssue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ;
+                       rdfs:comment "Health and safety issues related to an specific task."@en ;
+                       rdfs:label "Health and safety issue"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Process
@@ -530,6 +532,10 @@ renp:Process rdf:type owl:Class ;
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty renp:executedBy ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty renp:relatedProject ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
@@ -582,8 +588,8 @@ renp:Process rdf:type owl:Class ;
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#Task
 renp:Task rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:hasAttribute ;
-                            owl:allValuesFrom renp:Attribute
+                            owl:onProperty renp:hasIssue ;
+                            owl:allValuesFrom renp:HealthSafetyIssue
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty renp:hasKPI ;
@@ -591,10 +597,6 @@ renp:Task rdf:type owl:Class ;
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty renp:executedBy ;
-                            owl:minCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:healthAndSecurityIssue ;
                             owl:minCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
@@ -614,35 +616,27 @@ renp:Task rdf:type owl:Class ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:actualFinishDateTime ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty renp:actualStartDateTime ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty renp:duration ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:dustIssue ;
+                            owl:onProperty renp:plannedFinishDateTime ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:electricalIssue ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:gasIssue ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:noiseIssue ;
+                            owl:onProperty renp:plannedStartDateTime ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty renp:start ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:telecommunicationIssue ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty renp:waterIssue ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ;
           rdfs:label "Task" .

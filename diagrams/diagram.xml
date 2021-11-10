@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2021-11-02T16:03:37.275Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36" version="15.4.1" etag="QUJKiMImHLR0MJJ-r82G" type="google">
-  <diagram id="j5w4ZizFtH0LNFPE_me3">
+<mxfile host="app.diagrams.net" modified="2021-11-10T12:15:54.553Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36" version="15.6.8" etag="ht0EvVtzbQ7kaWzAWSgz" type="google">
+  <diagram id="M5WmG0tdMPJvpBJOTpRZ">
     <mxGraphModel dx="1929" dy="2186" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" value="&lt;div&gt;&lt;b&gt;renp&lt;/b&gt;:&amp;nbsp;http://bimerr.iot.linkeddata.es/def/renovation-processes#&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left&quot;&gt;&lt;b&gt;kpi:&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;http://bimerr.iot.linkeddata.es/def/key-performance-indicators#&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left&quot;&gt;&lt;b&gt;saref:&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;https://saref.etsi.org/core/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;building:&lt;/b&gt;&amp;nbsp;http://bimerr.iot.linkeddata.es/def/building#&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
-          <mxGeometry x="140.44" y="-260" width="420" height="100" as="geometry" />
+          <mxGeometry x="150" y="-250" width="420" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="&lt;div&gt;&lt;b&gt;dc:creator:&lt;/b&gt;&amp;nbsp;Serge Chávez-Feria&lt;/div&gt;&lt;div&gt;&lt;b&gt;dc:creator:&lt;/b&gt; María Poveda-Villalón&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt; 0.0.2&lt;/div&gt;&lt;div&gt;&lt;b&gt;dc:title:&lt;/b&gt; Renovation Processes Ontology&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.23333333333333334;" vertex="1" parent="1">
-          <mxGeometry x="630.4399999999998" y="-250" width="350" height="90" as="geometry" />
+        <mxCell id="3" value="&lt;div&gt;&lt;b&gt;dc:creator:&lt;/b&gt;&amp;nbsp;Serge Chávez-Feria&lt;/div&gt;&lt;div&gt;&lt;b&gt;dc:creator:&lt;/b&gt; María Poveda-Villalón&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt; 1.0.0&lt;/div&gt;&lt;div&gt;&lt;b&gt;dc:title:&lt;/b&gt; Renovation Processes Ontology&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.23333333333333334;" vertex="1" parent="1">
+          <mxGeometry x="644.9999999999998" y="-245" width="350" height="90" as="geometry" />
         </mxCell>
         <mxCell id="4" value="renp:hasProcess (1..N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="16" target="8" parent="1">
           <mxGeometry x="-0.2552" relative="1" as="geometry">
@@ -67,11 +67,11 @@
         <mxCell id="20" value="(all) renp:hasKPI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" source="19" target="26" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="21" value="(all) renp:hasAttribute" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="22" target="33" parent="1">
+        <mxCell id="21" value="(all) renp:hasIssue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="22" target="33" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="22" value="renp:name (1..1) : String&lt;br&gt;renp:taskId (1..1) : String&lt;br&gt;renp:i3dResultId (1..1): String&lt;br&gt;renp:result (1..1) : String&lt;br&gt;renp:start (0..1) : DateTime&lt;br&gt;renp:duration (0..1) : Duration&lt;br&gt;renp:dustIssue (0..1) : Boolean&lt;br&gt;renp:telecommunicationIssue (0..1) : Boolean&lt;br&gt;renp:noiseIssue (0..1) : Boolean&lt;br&gt;renp:electricalIssue (0..1) : Boolean&lt;br&gt;renp:gasIssue (0..1) : Boolean&lt;br&gt;renp:waterIssue (0..1) : Boolean" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="-653" width="275" height="183" as="geometry" />
+        <mxCell id="22" value="renp:name (1..1) : String&lt;br&gt;renp:taskId (1..1) : String&lt;br&gt;renp:i3dResultId (1..1): String&lt;br&gt;renp:result (1..1) : String&lt;br&gt;renp:start (0..1) : DateTime&lt;br&gt;renp:duration (0..1) : Duration&lt;br&gt;renp:plannedStartDateTime (0..1) : DateTime&lt;br&gt;renp:plannedFinishDateTime (0..1) : DateTime&lt;br&gt;renp:actualStartDateTime (0..1) : DateTime&lt;br&gt;renp:actualFinishDateTime (0..1) : DateTime" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="-653" width="275" height="153" as="geometry" />
         </mxCell>
         <mxCell id="23" value="renp:identifier (1..1) : String&lt;br&gt;renp:email (1..1) : String" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="70" y="-832" width="180" height="42" as="geometry" />
@@ -92,22 +92,39 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="29" value="kpi:KPIValue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
-          <mxGeometry x="592.94" y="-550" width="212.13" height="27" as="geometry" />
+          <mxGeometry x="592.94" y="-570" width="212.13" height="27" as="geometry" />
         </mxCell>
         <mxCell id="30" value="saref:hasValue (1..1)&lt;br&gt;kpi:minValue (1..1) : Float&lt;br&gt;kpi:maxValue (1..1): Float&lt;br&gt;kpi:tolerance (1..1) : Float&lt;br&gt;kpi:absoluteDeviation (1..1) : Double&lt;br&gt;kpi:relativeDeviation (1..1) : Double" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="592.94" y="-523" width="211.87" height="96" as="geometry" />
+          <mxGeometry x="592.94" y="-543" width="211.87" height="96" as="geometry" />
         </mxCell>
         <mxCell id="31" value="saref:UnitOfMeasure" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="859.44" y="-503" width="121" height="27" as="geometry" />
+          <mxGeometry x="859.44" y="-523" width="121" height="27" as="geometry" />
         </mxCell>
         <mxCell id="32" value="renp:name (1..1)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="859.7" y="-476" width="120.74" height="29" as="geometry" />
+          <mxGeometry x="859.7" y="-496" width="120.74" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="33" value="renp:Attribute" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="257.5" y="-410" width="200" height="27" as="geometry" />
+        <mxCell id="33" value="renp:HealthSafetyIssue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="221.25" y="-420" width="272.5" height="27" as="geometry" />
         </mxCell>
-        <mxCell id="34" value="renp:name (1..1) : String&lt;br&gt;renp:attributeValue (1..1) : Integer&lt;br&gt;renp:comment (0..1) : String&lt;br&gt;renp:real (1..1) : Boolean&lt;br&gt;renp:planned (1..1) : Boolean&lt;br&gt;renp:generated (1..1) : Boolean" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="257.5" y="-383" width="200" height="93" as="geometry" />
+        <mxCell id="34" value="renp:message (1..1) : String&lt;br&gt;renp:dustIssue (0..1) : Boolean&lt;br&gt;renp:telecommunicationIssue (0..1) : Boolean&lt;br&gt;renp:noiseIssue (0..1) : Boolean&lt;br&gt;renp:electricalIssue (0..1) : Boolean&lt;br&gt;renp:gasIssue (0..1) : Boolean&lt;br&gt;renp:waterIssue (0..1) : Boolean" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="221.25" y="-393" width="272.5" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="renp:relatedProject (1..1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=oval;startFill=0;" edge="1" source="8" target="5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="(all) relatedStorey" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=oval;startFill=0;" edge="1" source="33" target="17" parent="1">
+          <mxGeometry x="-0.2445" y="7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="37" value="(all) relatedSpace" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=oval;startFill=0;" edge="1" source="33" target="10" parent="1">
+          <mxGeometry x="-0.3544" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="-400" />
+              <mxPoint x="1030" y="-917" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
