@@ -260,6 +260,12 @@ renp:i3did rdf:type owl:DatatypeProperty ;
            rdfs:label "i3d id"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/renovation-processes#identifier
+renp:identifier rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "identifier"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/renovation-processes#message
 renp:message rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
@@ -358,20 +364,6 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/building#Element
-building:Element rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty building:ifcIdentifier ;
-                                   owl:cardinality "1"^^xsd:nonNegativeInteger
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty renp:name ;
-                                   owl:cardinality "1"^^xsd:nonNegativeInteger
-                                 ] ;
-                 rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
-                 rdfs:label "Element" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#Space
 building:Space rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -407,11 +399,11 @@ kpi:KPI rdf:type owl:Class ;
                           owl:minCardinality "1"^^xsd:nonNegativeInteger
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty renp:name ;
+                          owl:onProperty renp:identifier ;
                           owl:cardinality "1"^^xsd:nonNegativeInteger
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty renp:processId ;
+                          owl:onProperty renp:name ;
                           owl:cardinality "1"^^xsd:nonNegativeInteger
                         ] ;
         rdfs:comment "Key performance indicators related to building renovation projects"@en ;
@@ -649,7 +641,7 @@ renp:Worker rdf:type owl:Class ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty renp:processId ;
+                              owl:onProperty renp:identifier ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ;
             rdfs:label "Worker" .
